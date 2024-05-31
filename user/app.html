@@ -1,0 +1,75 @@
+<html>
+<head>
+   <title>Employee status</title>
+   <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee status</h1>
+        <br/>
+        <video id="videoCam"></video>
+        <br/><br/>
+        <div class="location">
+            <h2>Location</h2>
+            <pre id="position">
+               
+            </pre>
+        </div>
+        <button id="startBtn" onclick="userDetails()">Open video and show location </button>
+    </div>
+   <script>
+    
+const x = document.getElementById("position");
+// const btn = document.getElementById("startBtn");
+
+// btn.addEventListener("click",() => userDetails());
+
+function userDetails(){
+
+    function openCam(){
+        let All_mediaDevices=navigator.mediaDevices
+        if (!All_mediaDevices || !All_mediaDevices.getUserMedia) {
+           console.log("getUserMedia() not supported.");
+           return;
+        }
+        All_mediaDevices.getUserMedia({
+           audio: true,
+           video: true
+        })
+        .then(function(vidStream) {
+           var video = document.getElementById('videoCam');
+           if ("srcObject" in video) {
+              video.srcObject = vidStream;
+           } else {
+              video.src = window.URL.createObjectURL(vidStream);
+           }
+           video.onloadedmetadata = function(e) {
+              video.play();
+           };
+        })
+        .catch(function(e) {
+           console.log(e.name + ": " + e.message);
+        });
+     }
+    
+     function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+      }
+      getLocation();
+      openCam();
+}
+
+
+
+   </script> 
+</body>
+</html>

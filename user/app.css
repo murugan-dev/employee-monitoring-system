@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding: 0;
+    border-radius: border-box;
+ }
+ h1{
+    color:#03F202;
+ }
+
+ .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+ }
+ #videoCam {
+    width: 630px;
+    height: 300px;
+    border: 3px solid #ccc;
+ }
+ #startBtn {
+    width: 120px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    color: #000;
+    width: 200px;
+    background-color: #03F202;
+    padding: 10px;
+ }
+
+ .location{
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+
+ .location > h4{
+    margin-left: -200px;
+    margin-bottom: 20px;
+    color: #03F202;
+ }
+
+ .location > pre{
+    font-weight: 800;
+    margin-top: 20px;
+    color: brown;
+ }

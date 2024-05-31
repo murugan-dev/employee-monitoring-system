@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #181919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+}
+
+.container{
+    max-width: 20rem;
+    background-color: #222323;
+    margin: 0;
+    box-shadow: 9px 9px 5px #070607;
+    padding: 30px;
+    border-radius: 4px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+     /*Green-03F202  bgclor-181919  333333 font-color=D8D8D8*/
+}
+
+h3{
+    color: #03F202;
+    text-align: center;
+    padding: 10px;
+}
+.i1, .i2{
+    position: relative;
+    padding: 8px;
+    background: #333333;
+    outline: none;
+    border: none;
+    margin: 9px;
+    border-radius: 4px;
+    min-width: 270px;
+    color: #fff;
+}
+#checkbox{
+    
+    /* margin-left: -240px; */
+    margin-top: -40px;
+    margin-left: 8px;
+}
+#Show{
+    color: #D8D8D8;
+    margin-left: 28px;
+    margin-top: -20px;
+}
+p{
+    font-size: 16px;
+   
+}
+a{
+    text-decoration: none;
+    color: #D8D8D8;
+}
+#Signup{
+    
+    color: #03F202;
+}
+#p1{
+    margin-left: 10px;
+    margin-top: 20px;    
+}
+
+#p2{
+    margin-left: 230px;
+    margin-top: -20px;
+
+}
+
+button{
+   margin-top: 15px;
+   margin-left: 10px;
+   padding: 9px;
+   min-width: 270px;
+   background: #03F202;
+   border: none;
+   outline: none;
+   border-radius: 4px;
+}
+
+button > a{
+    color: #000;
+}
